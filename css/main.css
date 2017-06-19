@@ -148,7 +148,7 @@ nav {
   align-items: center;
   height: 100px;
   background-color: black;
-  font-size: 25px;
+  font-size: 20px;
   font-family: courier new;
 }
 
@@ -159,12 +159,36 @@ a {
 a:hover {
   color: orange;
 }
+
 li {
   list-style-type: none;
 
 }
-/*footer*/
 
+/*page article*/
+
+.bg {
+  margin: 0;
+  height: 100vh;
+  background: url(https://coreight.com/sites/default/files/field/image/site-web-reflexion.jpg) no-repeat center fixed;
+  text-align: center;
+}
+
+.bg h1 {
+  margin: 0;
+  color: white;
+  font-size: 35px;
+  padding-top: 25vh;
+  width: 60%;
+  margin: auto;
+  text-shadow: 7px 7px 7px rgba(0,0,0,1);
+}
+
+.para p {
+  padding-top: 50px;
+}
+
+/*footer*/
 
 footer
 {
@@ -253,6 +277,13 @@ footer .blockAbout .listRight li a
 
   }
 
+  nav {
+    font-size: 25px;
+  }
+
+  .bg h1 {
+    font-size: 60px;
+  }
   footer
   {
     flex-direction: row-reverse;
@@ -277,6 +308,9 @@ footer .blockAbout .listRight li a
   {
     font-size: 17px;
   }
+
+
+
 }
 
 
