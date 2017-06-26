@@ -1,5 +1,4 @@
 
-
 // onglets
 
 var tabs = document.querySelectorAll('.tabs a')
@@ -30,38 +29,59 @@ function myFunction() {
   } else {
       txt = "You pressed Cancel!";
   }
-  document.getElementById("demo").textContent = txt;
+  document.getElementById("demo").innerHTML = txt;
 }
-
 
 // compteur
 
-var compt = document.getElementById("compteur")
-compt.textContent=0;
-function augmenter(){
-  compt.textContent = parseInt(compt.textContent) +1;
+const timer = document.getElementById('timer');
+let counter = 0;
+const tableau = [];
+
+function countDown() {
+timer.textContent = counter;
+counter++;
 }
-setInterval(augmenter,1000);
 
+setInterval(countDown, 1000);
 
-// img hover
-var img = document.getElementsByTagName("img");
-var text = document.getElementsByClassName("bonjour");
+document.body.addEventListener('click', function() {
+tableau.push(counter);
+console.log(tableau);
+});
 
-for (let i = 0 ; i < img.length ; i++) {
-img[i].addEventListener("mouseover", function() {
-  var alt = img[i].alt;
-  text[i].textContent = alt;
-}
-);
-};
-
-for (let i = 0 ; i < img.length ; i++) {
-img[i].addEventListener("mouseout", function() {
-text[i].textContent = "";
-}
-);
-};
 
 
 // FONCTION DATE
+
+function date()
+{
+       date = new Date();
+       annee = date.getFullYear();
+       mois = date.getMonth();
+       jour = date.getDate();
+       resultat = jour+ "/"+mois+"/"+annee;
+       document.getElementById("date").innerHTML = resultat;
+}
+resultat = date();
+
+
+// FONCTION HEURE
+
+function heure() {
+  date1 = new Date;
+  h = date1.getHours();
+  if(h<10)
+  {
+          h = "0"+h;
+  }
+  m = date1.getMinutes();
+  if(m<10)
+  {
+          m = "0"+m;
+  }
+  resultat1 = 'Il est '+h+':'+m;
+  document.getElementById("heure").textContent = resultat1;
+}
+setInterval(heure,60000);
+resultat1 = heure();
