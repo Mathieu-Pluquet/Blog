@@ -39,9 +39,22 @@
 
     <!-- start of main container  -->
 
-    <!-- JS DATE -->
-    <script type="text/javascript">
+    <!-- <div>
+      <ul class="tabs">
+        <li class="active"><a href="#home">Accueil</a></li>
+        <li><a href="#mentions">Mentions</a></li>
+        <li><a href="#about">propos</a></li>
+      </ul>
+      <div class="tabs-content">
+        <div class="tab-content active" id="home">bonjour</div>
+        <div class="tab-content" id="mentions">salut</div>
+        <div class="tab-content" id="about">coucou</div>
+      </div>
+    </div> -->
 
+    <!-- JS DATE -->
+
+    <script type="text/javascript">
 
     function date(id)
     {
@@ -67,7 +80,7 @@
             {
                     s = "0"+s;
             }
-            resultat = 'Nous sommes le '+jours[jour]+' '+j+' '+mois[moi]+' '+annee;
+            resultat =jours[jour]+' '+j+' '+mois[moi]+' '+annee;
             document.getElementById(id).innerHTML = resultat;
             setTimeout('date("'+id+'");','1000');
             return true;
@@ -77,6 +90,8 @@
     <span id="date"></span> <br>
 
     <script type="text/javascript">window.onload = date('date');</script>
+
+
     <!-- JS HEURE  -->
 
     <script type="text/javascript">
@@ -93,12 +108,7 @@
             {
                     m = "0"+m;
             }
-            s = date.getSeconds();
-            if(s<10)
-            {
-                    s = "0"+s;
-            }
-            resultat = 'Il est '+h+':'+m+':'+s;
+            resultat = 'Il est '+h+':'+m;
             document.getElementById(id).innerHTML = resultat;
             setTimeout('heure("'+id+'");','1000');
             return true;
@@ -111,7 +121,7 @@
 
     <!-- JS compteur -->
 
-    <span>Vous êtes ici depuis : </span><span id="timer"></span><span> seconde(s)</span>
+    <span>Vous êtes ici depuis : </span><span id="compteur"></span><span> seconde(s)</span>
 
 
       <!-- 1er article -->
@@ -161,29 +171,11 @@
 
 
     <script type="text/javascript">
-    var img = document.getElementsByTagName("img");
-    var text = document.getElementsByClassName("bonjour");
-
-    for (let i = 0 ; i < img.length ; i++) {
-    img[i].addEventListener("mouseover", function() {
-      var alt = img[i].alt;
-      text[i].textContent = alt;
-    }
-    );
-  };
-
-  for (let i = 0 ; i < img.length ; i++) {
-  img[i].addEventListener("mouseout", function() {
-    text[i].textContent = "";
-  }
-  );
-  };
+    
     </script>
 
-
-
-
       <!-- pagination -->
+
     <div class="page">
       <ul class="pagination">
        <li class="active"><a href="#">1</a></li>
@@ -204,10 +196,14 @@
       <p>Subscribe to our newsletter to start receiving Blog news.</p>
       <form action="index.html" method="post">
         <input type="text" name="email" placeholder="Your e-mail">
-        <button onclick="myFunction()">Envoyer</button>
+      <button onclick="myFunction()"> Envoyer</button>
+      <a href="article.html" class="bonjour">bonjour</a>
       </form>
     </div>
     <div class="blockAbout">
+
+
+
       <ul class="listRight">
         <li>Follow <a href="https://twitter.com/quiverit">@Mathieu_Pluquet</a> on Twitter</li>
         <li>Like <a href="https://www.facebook.com/quiverit">Mathieu Pluquet</a> on Facebook</li>
