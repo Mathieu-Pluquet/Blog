@@ -24,169 +24,110 @@
 
         <!-- Add your site or application content here -->
 
-    <!-- start of header -->
-      <header>
-        <nav class="">
-          <li><a href="index.html">Accueil.</a></li>
-          <li><a href="">Web.</a></li>
-          <li><a href="">Tech.</a></li>
-          <li><a href="">Mobile.</a></li>
-        </nav>
-     </header>
+        <!-- start of header -->
+          <header>
+            <nav class="">
+              <li><a href="index.php">Accueil.</a></li>
+              <li><a href="">Web.</a></li>
+              <li><a href="">Tech.</a></li>
+              <li><a href="">Mobile.</a></li>
+            </nav>
+         </header>
 
 
-    <!-- end of header -->
+        <!-- end of header -->
 
-    <!-- start of main container  -->
+          <!-- 1er article -->
+        <div class="main container">
+        <div class="row ">
+          <article class="col-sm-12 col-xs-12">
+            <a href="article.php">
+              <img src="<?php echo get_bloginfo('template_url') ?>/img/img1.jpeg" alt="bureau d'ordinateur1"/>
+              <p class="bonjour"> </p>
+            </a>
+            <a href="">
+              <h2>Les éléments indispensables à considérer avant la création de votre site web</h2>
+            </a>
+            <p class="p1">par quelqu'un</p>
+          </article>
 
-    <!-- <div>
-      <ul class="tabs">
-        <li class="active"><a href="#home">Accueil</a></li>
-        <li><a href="#mentions">Mentions</a></li>
-        <li><a href="#about">propos</a></li>
-      </ul>
-      <div class="tabs-content">
-        <div class="tab-content active" id="home">bonjour</div>
-        <div class="tab-content" id="mentions">salut</div>
-        <div class="tab-content" id="about">coucou</div>
-      </div>
-    </div> -->
+          <!-- 2eme article -->
 
-    <!-- JS DATE -->
-
-    <script type="text/javascript">
-
-    function date(id)
-    {
-            date = new Date;
-            annee = date.getFullYear();
-            moi = date.getMonth();
-            mois = new Array('Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre');
-            j = date.getDate();
-            jour = date.getDay();
-            jours = new Array('Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi');
-            h = date.getHours();
-            if(h<10)
-            {
-                    h = "0"+h;
-            }
-            m = date.getMinutes();
-            if(m<10)
-            {
-                    m = "0"+m;
-            }
-            s = date.getSeconds();
-            if(s<10)
-            {
-                    s = "0"+s;
-            }
-            resultat =jours[jour]+' '+j+' '+mois[moi]+' '+annee;
-            document.getElementById(id).innerHTML = resultat;
-            setTimeout('date("'+id+'");','1000');
-            return true;
-    }
-    </script>
-
-    <span id="date"></span> <br>
-
-    <script type="text/javascript">window.onload = date('date');</script>
+          <article class="col-sm-12 col-xs-12">
+            <a href="article.html">
+              <img src="<?php echo get_bloginfo('template_url') ?>/img/img1.jpeg" alt="bureau d'ordinateur2"/>
+              <p class="bonjour"> </p>
+            </a>
+            <a href="">
+              <h2>Les éléments indispensables à considérer avant la création de votre site web</h2>
+            </a>
+            <p class="p1">par quelqu'un</p>
+          </article>
 
 
-    <!-- JS HEURE  -->
+          <!-- 3eme article -->
 
-    <script type="text/javascript">
-    function heure(id)
-    {
-            date = new Date;
-            h = date.getHours();
-            if(h<10)
-            {
-                    h = "0"+h;
-            }
-            m = date.getMinutes();
-            if(m<10)
-            {
-                    m = "0"+m;
-            }
-            resultat = 'Il est '+h+':'+m;
-            document.getElementById(id).innerHTML = resultat;
-            setTimeout('heure("'+id+'");','1000');
-            return true;
-    }
-    </script>
+          <article class="col-sm-12 col-xs-12">
+            <a href="article.html">
+                <img src="<?php echo get_bloginfo('template_url') ?>/img/img1.jpeg" alt="bureau d'ordinateur3"/>
+              <p class="bonjour"> </p>
+            </a>
+            <a href="">
+              <h2>Les éléments indispensables à considérer avant la création de votre site web</h2>
+            </a>
+            <p class="p1">par quelqu'un</p>
+          </article>
+        </div>
+        </div>
 
-    <span id="heure"></span> <br>
-    <script type="text/javascript">window.onload = heure('heure');
-    </script>
-
-    <!-- JS compteur -->
-
-    <span>Vous êtes ici depuis : </span><span id="compteur"></span><span> seconde(s)</span>
+        <!-- JS HOVER IMG -->
 
 
-      <!-- 1er article -->
-<div class="main container">
-<div class="row ">
-      <article class="col-sm-12 col-xs-12">
-        <a href="article.html">
-          <img src="img/img1.jpeg" alt="bureau avec ordinateur">
-          <p class="bonjour"> </p>
-        </a>
-        <a href="">
-          <h2>Les éléments indispensables à considérer avant la création de votre site web</h2>
-        </a>
-        <p class="p1">par quelqu'un</p>
-      </article>
+        <script type="text/javascript">
+        var img = document.getElementsByTagName("img");
+        var text = document.getElementsByClassName("bonjour");
 
-      <!-- 2eme article -->
+        for (let i = 0 ; i < img.length ; i++) {
+        img[i].addEventListener("mouseover", function() {
+          var alt = img[i].alt;
+          text[i].textContent = alt;
+        }
+        );
+        };
 
-      <article class="col-sm-12 col-xs-12">
-        <a href="article.html">
-          <img src="img/img1.jpeg" alt="bureau avec ordinateur1">
-          <p class="bonjour"> </p>
-        </a>
-        <a href="">
-          <h2>Les éléments indispensables à considérer avant la création de votre site web</h2>
-        </a>
-        <p class="p1">par quelqu'un</p>
-      </article>
+        for (let i = 0 ; i < img.length ; i++) {
+        img[i].addEventListener("mouseout", function() {
+        text[i].textContent = "";
+        }
+        );
+        };
+        </script>
 
 
-      <!-- 3eme article -->
-
-      <article class="col-sm-12 col-xs-12">
-        <a href="article.html">
-          <img src="img/img1.jpeg" alt="bureau avec ordinateur2">
-          <p class="bonjour"> </p>
-        </a>
-        <a href="">
-          <h2>Les éléments indispensables à considérer avant la création de votre site web</h2>
-        </a>
-        <p class="p1">par quelqu'un</p>
-      </article>
-</div>
-</div>
-
-<!-- JS HOVER IMG -->
+        <!-- JS DATE -->
 
 
-    <script type="text/javascript">
+        <span id="date"></span> <br>
+        <span id="heure"></span> <br>
 
-    </script>
 
-      <!-- pagination -->
+        <!-- JS compteur -->
 
-    <div class="page">
-      <ul class="pagination">
-       <li class="active"><a href="#">1</a></li>
-       <li><a href="#">2</a></li>
-       <li><a href="#">3</a></li>
-       <li><a href="#">4</a></li>
-       <li><a href="#">5</a></li>
-      </ul>
-    </div>
+        <span>Vous êtes ici depuis : </span><span id="timer"></span><span> seconde(s)</span>
 
-    <!-- end of main container  -->
+          <!-- pagination -->
+
+        <div class="page">
+          <ul class="pagination">
+           <li class="active"><a href="#">1</a></li>
+           <li><a href="#">2</a></li>
+           <li><a href="#">3</a></li>
+           <li><a href="#">4</a></li>
+           <li><a href="#">5</a></li>
+          </ul>
+        </div>
+
+        <!-- end of main container  -->
 
 
     <!-- start of footer -->
